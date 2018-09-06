@@ -14,9 +14,10 @@ namespace AnswerDigitalTest
         IWebDriver driver;
 
         /*
-         Test case 1: Automate Form Authentication         Scenario 1: Try to login with correct username and wrong password and assert login validation
+         Test case 1: Automate Form Authentication         Scenario 1: Try to login with correct username and wrong password and assert login validation
          Scenario 2: Try to login with incorrect username and correct password and assert login validation
          Scenario 3: Try to login with correct username and password and then logout
+
         */
 
         [Test]
@@ -30,9 +31,10 @@ namespace AnswerDigitalTest
             //Find and click on Form Authentication
             driver.FindElement(By.XPath("//*[@id='content']/ul/li[18]/a")).Click();
 
-            
+
             //Close browser - End Test
             driver.Close();
+
 
         }
 
@@ -51,6 +53,8 @@ namespace AnswerDigitalTest
 
             //Close browser - End Test
             driver.Close();
+
+
         }
 
         [Test]
