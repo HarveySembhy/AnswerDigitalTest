@@ -14,8 +14,6 @@ namespace AnswerDigitalTest
         static void Main(string[] args)
         {
 
-                        
-            
 
 
         }

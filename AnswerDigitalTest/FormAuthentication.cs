@@ -42,27 +42,33 @@ namespace AnswerDigitalTest
 
             //Find and click on Form Authentication
             driver.FindElement(By.XPath("//*[@id='content']/ul/li[18]/a")).Click();
-            
+
+            System.Threading.Thread.Sleep(2000);
+
             //Find Username and type in "tomsmith"
             IWebElement Username = driver.FindElement(By.Id("username"));
             Username.SendKeys("tomsmith");
 
+            System.Threading.Thread.Sleep(1000);
+
             //Find Password and type in "harvey"
             IWebElement Password = driver.FindElement(By.Id("password"));
-            Password.SendKeys("harvey");            
+            Password.SendKeys("harvey");
+
+            System.Threading.Thread.Sleep(2000);
 
             //Find Login button and click
             IWebElement Login = driver.FindElement(By.XPath("//div[2]/div/div/form/button"));
             Login.Click();
 
             //Set a wait period
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
+            System.Threading.Thread.Sleep(2000);
 
             //Verify username invalid error
             IWebElement Error = driver.FindElement(By.Id("flash"));
 
             //Set a wait period
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
+            System.Threading.Thread.Sleep(2000);
 
             driver.Quit();
         }
@@ -78,31 +84,36 @@ namespace AnswerDigitalTest
             //Find and click on Form Authentication
             driver.FindElement(By.XPath("//*[@id='content']/ul/li[18]/a")).Click();
 
+            System.Threading.Thread.Sleep(2000);
+
             //Find Username and type in "tomsmith"
             IWebElement Username = driver.FindElement(By.Id("username"));
             Username.SendKeys("harveysembhy");
+
+            System.Threading.Thread.Sleep(1000);
 
             //Find Password and type in "harvey"
             IWebElement Password = driver.FindElement(By.Id("password"));
             Password.SendKeys("SuperSecretPassword!");
 
+            System.Threading.Thread.Sleep(2000);
+
             //Find Login button and click
             IWebElement Login = driver.FindElement(By.XPath("//div[2]/div/div/form/button"));
             Login.Click();
-
+                        
             //Set a wait period
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
+            System.Threading.Thread.Sleep(2000);
 
             //Verify Success message
-            IWebElement Success = driver.FindElement(By.Id("flash"));                                         
+            IWebElement Success = driver.FindElement(By.Id("flash"));
 
             //Set a wait period
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
+            System.Threading.Thread.Sleep(2000);
 
             driver.Quit();
         }
-
-        
+                
         [Test]
         public void Scenario3()
         {
@@ -114,30 +125,36 @@ namespace AnswerDigitalTest
             //Find and click on Form Authentication
             driver.FindElement(By.XPath("//*[@id='content']/ul/li[18]/a")).Click();
 
+            System.Threading.Thread.Sleep(2000);
+
             //Find Username and type in "tomsmith"
             IWebElement Username = driver.FindElement(By.Id("username"));
             Username.SendKeys("tomsmith");
 
+            System.Threading.Thread.Sleep(1000);
+
             //Find Password and type in "harvey"
             IWebElement Password = driver.FindElement(By.Id("password"));
             Password.SendKeys("SuperSecretPassword!");
+
+            System.Threading.Thread.Sleep(2000);
 
             //Find Login button and click
             IWebElement Login = driver.FindElement(By.XPath("//div[2]/div/div/form/button"));
             Login.Click();
 
             //Set a wait period
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
+            System.Threading.Thread.Sleep(2000);
 
             //Logout button
-            IWebElement Logout = driver.FindElement(By.XPath("//div[2]/div/div/a"));
-            Logout.Click();
+            IWebElement LogOut = driver.FindElement(By.XPath("//div[2]/div/div/a"));
+            LogOut.Click();                       
 
             //Verify you are on the Login Page
             IWebElement LoginPageText = driver.FindElement(By.XPath("//div[2]/div/div/h2"));
 
             //Set a wait period
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
+            System.Threading.Thread.Sleep(2000);
 
             driver.Quit();
         }
