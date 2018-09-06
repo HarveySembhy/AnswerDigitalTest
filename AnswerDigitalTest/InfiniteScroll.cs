@@ -16,9 +16,7 @@ namespace AnswerDigitalTest
         
         /*Test case 2: scroll to the bottom of the page twice and scroll back to the top of the page and assert "Infinite Scroll" text
          */
-
-        //*[@id="content"]/ul/li[23]/a
-
+         
         //Tutorial used: https://www.youtube.com/watch?v=qNfItrgJbYI
 
         [Test]
@@ -33,24 +31,47 @@ namespace AnswerDigitalTest
             IWebElement InfiniteLink = driver.FindElement(By.XPath("//*[@id='content']/ul/li[23]/a"));
             InfiniteLink.Click();
 
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(1000);
 
-            //Scroll down the page 'Once'
-            IJavaScriptExecutor js = driver as IJavaScriptExecutor;
-            //System.Threading.Thread.Sleep(500);            
-            //js.ExecuteScript("window.scrollBy(0, 0, 50)");
+            IJavaScriptExecutor js = (IJavaScriptExecutor) driver;
+            var firstScrollHeight = js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight); return document.body.scrollHeight;");
+                        
+            System.Threading.Thread.Sleep(1000);
+                        
+            var secondScrollHeight = js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight); return document.body.scrollHeight;");
+
+            System.Threading.Thread.Sleep(1000);
+
+            //IWebElement InfiniteHeader = driver.FindElement(By.XPath("//*[@id='content']/div/h3"));
+
+            var thirdScrollHeight = js.ExecuteScript("arguments[0].scrollIntoView()", driver.FindElement(By.XPath("//*[@id='content']/div/h3")));
+                        
+            System.Threading.Thread.Sleep(1000);
+            
+            //IWebElement ThirdParagraph = driver.FindElement(By.XPath(""));
+            //ThirdParagraph.SendKeys(Keys.PageDown);
 
             //Wait
-            System.Threading.Thread.Sleep(500);
+            //System.Threading.Thread.Sleep(50);
 
             //Scroll down the page 'Twice'
-            js.ExecuteScript();
+            //javaScript.ExecuteScript("window.scrollBy(0, 0, 1000)");
             //System.Threading.Thread.Sleep(2000);
 
-            driver.Close();
+            
         }
 
-        
+        [TearDown]
+        public void CloseBrowser()
+        {
+            driver.Quit();
+        }
+
+        //driver.get("http://www.flipkart.com/");
+        //driver.manage().window().maximize();
+        //driver.findElement(By.linkText("Trimmer")).click();
+        //WebElement scroll = driver.findElement(By.id("brand"));
+        //scroll.sendKeys(Keys.PAGE_DOWN);
 
     }
 }
