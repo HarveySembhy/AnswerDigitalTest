@@ -22,15 +22,7 @@ namespace AnswerDigitalTest
          Scenario 3: Try to login with correct username and password and then logout
 
         */
-        //[SetUp]
-        //public void OpenBrowser()
-        //{
-        //    //Open the Chrome and go to Url
-        //    driver = new ChromeDriver(@"C:\driver");
-        //    driver.Navigate().GoToUrl("http://the-internet.herokuapp.com/");
-        //    driver.Manage().Window.Maximize();
-        //}
-
+       
 
         [Test]
         public void Scenario1()
