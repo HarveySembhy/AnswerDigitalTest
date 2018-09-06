@@ -94,11 +94,7 @@ namespace AnswerDigitalTest
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
 
             //Verify Success message
-            IWebElement Success = driver.FindElement(By.Id("flash"));
-                      
-
-            //Veryfi you are on the Login Page
-            IWebElement LoginPageText = driver.FindElement(By.Id("flash"));
+            IWebElement Success = driver.FindElement(By.Id("flash"));                                         
 
             //Set a wait period
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
@@ -136,6 +132,9 @@ namespace AnswerDigitalTest
             //Logout button
             IWebElement Logout = driver.FindElement(By.XPath("//div[2]/div/div/a"));
             Logout.Click();
+
+            //Verify you are on the Login Page
+            IWebElement LoginPageText = driver.FindElement(By.XPath("//div[2]/div/div/h2"));
 
             //Set a wait period
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
