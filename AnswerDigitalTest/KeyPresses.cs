@@ -39,10 +39,43 @@ namespace AnswerDigitalTest
             
             Thread.Sleep(1000);
 
-            //Assert for the new element after pressing a
-            IWebElement EnteredA = driver.FindElement(By.XPath("//*[@id='content']/div/p[@id='result']"));
+            //Assert for the result after pressing a
+            IWebElement EnteredA = driver.FindElement(By.XPath("//p[2][contains(text(), 'You entered: A')]"));
 
-            
+            Thread.Sleep(1000);
+
+            //Press S on keyboard
+            IWebElement PressB = driver.FindElement(By.XPath("/html/body"));
+            PressA.SendKeys("s");
+
+            Thread.Sleep(1000);
+
+            //Assert for the result after pressing S
+            IWebElement EnteredS = driver.FindElement(By.XPath("//p[2][contains(text(), 'You entered: S')]"));
+
+            Thread.Sleep(1000);
+
+            //Press D on keyboard
+            IWebElement PressD = driver.FindElement(By.XPath("/html/body"));
+            PressA.SendKeys("D");
+
+            Thread.Sleep(1000);
+
+            //Assert for the result after pressing D
+            IWebElement EnteredD = driver.FindElement(By.XPath("//p[2][contains(text(), 'You entered: D')]"));
+
+            Thread.Sleep(1000);
+
+            //Press F on keyboard
+            IWebElement PressF = driver.FindElement(By.XPath("/html/body"));
+            PressA.SendKeys("F");
+
+            Thread.Sleep(1000);
+
+            //Assert for the result after pressing D
+            IWebElement EnteredF = driver.FindElement(By.XPath("//p[2][contains(text(), 'You entered: F')]"));
+
+            Thread.Sleep(1000);
 
         }
 
