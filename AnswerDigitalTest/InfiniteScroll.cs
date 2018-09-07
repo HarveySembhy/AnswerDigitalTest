@@ -27,7 +27,7 @@ namespace AnswerDigitalTest
             driver.Navigate().GoToUrl("http://the-internet.herokuapp.com/");
             driver.Manage().Window.Maximize();
 
-            //Find and click on Form Authentication
+            //Find and click on Infinite Scroll
             IWebElement InfiniteLink = driver.FindElement(By.XPath("//*[@id='content']/ul/li[23]/a"));
             InfiniteLink.Click();
 
