@@ -23,11 +23,11 @@ namespace AnswerDigitalTest
             //Login Test
             try
             {
-                Console.WriteLine("Checking Login Tests...");
+                Console.WriteLine("Checking Login Tests...\n");
                 checkLogin.Scenario1();
                 checkLogin.Scenario2();
                 checkLogin.Scenario3();
-                Console.WriteLine("Login Tests have PASSSED");
+                Console.WriteLine("Login Tests have PASSSED\n");
             }
             catch (NoSuchElementException)
             {
@@ -37,26 +37,26 @@ namespace AnswerDigitalTest
             //Scrolling Test
             try
             {
-                Console.WriteLine("Checking Infinite Scrolling Tests...");
+                Console.WriteLine("Checking Infinite Scrolling Tests...\n");
                 checkScroll.ScrollTwice();
-                Console.WriteLine("Scrolling tests have PASSED");
+                Console.WriteLine("Scrolling tests have PASSED\n");
             }
             catch (NoSuchElementException)
             {
-                Console.WriteLine("Scrolling checks Failed");
+                Console.WriteLine("Scrolling checks Failed\n");
             }
 
             //Key Press Tests
             try
             {
-                Console.WriteLine("Checking Key Press Tests...");
+                Console.WriteLine("Checking Key Press Tests...\n");
                 checkKeyPress.KeyPress();
-                Console.WriteLine("Key Press tests PASSED");
+                Console.WriteLine("Key Press tests PASSED\n");
             }
 
             catch (NoSuchElementException)
             {
-                Console.WriteLine("Key Press checks Failed");
+                Console.WriteLine("Key Press checks Failed\n");
             }
 
             Console.ReadLine();
