@@ -46,7 +46,7 @@ namespace AnswerDigitalTest
             System.Threading.Thread.Sleep(1000);
 
             //Scroll to the top and look for Infinite Scroll title
-            var thirdScrollHeight = js.ExecuteScript("arguments[0].scrollIntoView()", driver.FindElement(By.XPath("//*[@id='content']/div/h3")));
+            var thirdScrollHeight = js.ExecuteScript("arguments[0].scrollIntoView()", driver.FindElement(By.XPath("//*[@id='content']/div/h3[contains(text(), 'Infinite Scroll')]")));
             
             //Wait
             System.Threading.Thread.Sleep(1000);                       

@@ -143,12 +143,18 @@ namespace AnswerDigitalTest
             //Set a wait period
             Thread.Sleep(2000);
 
+            //Successfully logged in message
+            IWebElement LoginSuccessful = driver.FindElement(By.XPath("//div/div/div[contains(text(), 'You logged into a secure area!')]"));
+
+            //Set a wait period
+            Thread.Sleep(1000);
+
             //Logout button
             IWebElement LogOut = driver.FindElement(By.XPath("//div[2]/div/div/a"));
             LogOut.Click();                       
 
             //Verify you are on the Login Page
-            IWebElement LoginPageText = driver.FindElement(By.XPath("//div[2]/div/div/h2"));
+            IWebElement LoginPageText = driver.FindElement(By.XPath("//div[2]/div/div/h2[contains(text(), 'Login Page')]"));
 
             //Set a wait period
             Thread.Sleep(2000);
