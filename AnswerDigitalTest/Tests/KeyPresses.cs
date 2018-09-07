@@ -31,50 +31,59 @@ namespace AnswerDigitalTest
             IWebElement KeyPress = driver.FindElement(By.XPath("//*[@id='content']/ul/li[27]/a"));
             KeyPress.Click();
 
+            //Wait
             Thread.Sleep(1000);
 
             //Find the page body and SendKeys
             IWebElement PressA = driver.FindElement(By.XPath("/html/body"));
             PressA.SendKeys("a");
             
+            //Wait
             Thread.Sleep(1000);
 
             //Assert for the result after pressing a
             IWebElement EnteredA = driver.FindElement(By.XPath("//p[2][contains(text(), 'You entered: A')]"));
 
+            //Wait
             Thread.Sleep(1000);
 
             //Press S on keyboard
             IWebElement PressB = driver.FindElement(By.XPath("/html/body"));
             PressA.SendKeys("s");
 
+            //Wait
             Thread.Sleep(1000);
 
             //Assert for the result after pressing S
             IWebElement EnteredS = driver.FindElement(By.XPath("//p[2][contains(text(), 'You entered: S')]"));
 
+            //Wait
             Thread.Sleep(1000);
 
             //Press D on keyboard
             IWebElement PressD = driver.FindElement(By.XPath("/html/body"));
             PressA.SendKeys("D");
 
+            //Wait
             Thread.Sleep(1000);
 
             //Assert for the result after pressing D
             IWebElement EnteredD = driver.FindElement(By.XPath("//p[2][contains(text(), 'You entered: D')]"));
 
+            //Wait
             Thread.Sleep(1000);
 
             //Press F on keyboard
             IWebElement PressF = driver.FindElement(By.XPath("/html/body"));
             PressA.SendKeys("F");
 
+            //Wait
             Thread.Sleep(1000);
 
             //Assert for the result after pressing D
             IWebElement EnteredF = driver.FindElement(By.XPath("//p[2][contains(text(), 'You entered: F')]"));
 
+            //Wait
             Thread.Sleep(1000);
 
         }
@@ -82,6 +91,7 @@ namespace AnswerDigitalTest
         [TearDown]
         public void CloseBrowser()
         {
+            //End test
             driver.Quit();
         }
 

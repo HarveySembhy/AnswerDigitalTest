@@ -13,12 +13,14 @@ namespace AnswerDigitalTest
     {
         static void Main(string[] args)
         {
+            //Test Suite
             var checkLogin = new FormAuthentication();
             var checkScroll = new InfiniteScroll();
             var checkKeyPress = new KeyPresses();
 
-            //Test
+            
 
+            //Login Test
             try
             {
                 Console.WriteLine("Checking Login Tests...");
@@ -32,6 +34,7 @@ namespace AnswerDigitalTest
                 Console.WriteLine("Login checks Failed");
             }
 
+            //Scrolling Test
             try
             {
                 Console.WriteLine("Checking Infinite Scrolling Tests...");
@@ -40,9 +43,10 @@ namespace AnswerDigitalTest
             }
             catch (NoSuchElementException)
             {
-                Console.WriteLine("Scrolling tests have Failed");
+                Console.WriteLine("Scrolling checks Failed");
             }
 
+            //Key Press Tests
             try
             {
                 Console.WriteLine("Checking Key Press Tests...");
@@ -52,7 +56,7 @@ namespace AnswerDigitalTest
 
             catch (NoSuchElementException)
             {
-                Console.WriteLine("Key Press test have Failed");
+                Console.WriteLine("Key Press checks Failed");
             }
 
             Console.ReadLine();

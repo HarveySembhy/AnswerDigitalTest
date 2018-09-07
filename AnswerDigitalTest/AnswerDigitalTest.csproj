@@ -53,9 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAuthentication.cs" />
-    <Compile Include="InfiniteScroll.cs" />
-    <Compile Include="KeyPresses.cs" />
+    <Compile Include="Tests\FormAuthentication.cs" />
+    <Compile Include="Tests\InfiniteScroll.cs" />
+    <Compile Include="Tests\KeyPresses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
