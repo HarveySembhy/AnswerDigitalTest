@@ -21,9 +21,7 @@ namespace AnswerDigitalTest
          Scenario 1: Try to login with correct username and wrong password and assert login validation
          Scenario 2: Try to login with incorrect username and correct password and assert login validation
          Scenario 3: Try to login with correct username and password and then logout
-
-        */
-       
+        */       
 
         [Test]
         public void Scenario1()
@@ -63,6 +61,7 @@ namespace AnswerDigitalTest
             //Set a wait period
             Thread.Sleep(2000);
 
+            //End test
             driver.Quit();
         }
         
